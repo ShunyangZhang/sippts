@@ -257,7 +257,7 @@ def create_message(method, contactdomain, fromuser, fromname, fromdomain, touser
 
     headers = dict()
     if via == '':
-        headers['Via'] = 'SIP/2.0/%s %s:%s;branch=%s' % (
+        headers['Via'] = 'SIP/2.0/%s %s:%s;branch=%s;rport' % (
             proto.upper(), contactdomain, fromport, branch)
     else:
         headers['Via'] = via
