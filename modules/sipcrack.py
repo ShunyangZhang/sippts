@@ -10,7 +10,7 @@ __email__ = "pepeluxx@gmail.com"
 from curses.ascii import isascii
 import io
 import base64
-from nis import cat
+# from nis import cat
 import re
 import time
 from lib.functions import calculateHash, format_time

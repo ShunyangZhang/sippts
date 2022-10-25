@@ -7,7 +7,7 @@ __license__ = "GPL"
 __copyright__ = "Copyright (C) 2015-2022, SIPPTS"
 __email__ = "pepeluxx@gmail.com"
 
-from sys import setdlopenflags
+# from sys import setdlopenflags
 from modules.sipdigestleak import SipDigestLeak
 from lib.params import get_sipdigestleak_args
 
