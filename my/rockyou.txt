@@ -1,0 +1,10 @@
+a123
+a1234
+admin
+password
+s1ptest
+admin123
+123456
+123123
+secret
+666666
