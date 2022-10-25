@@ -615,7 +615,7 @@ def parse_digest(buffer):
         else:
             data['realm'] = ''
 
-        m = re.search('\snonce=\"([a-z|A-Z|0-9|\/|\+|\=]+)\"', header)
+        m = re.search('nonce=\"([a-z|A-Z|0-9|\/|\+|\=|\:]+)\"', header)
         if m:
             data['nonce'] = '%s' % (m.group(1))
         else:
@@ -661,13 +661,13 @@ def parse_digest(buffer):
 
 
 def getHash(algorithm, string):
-    if algorithm == 'MD5':
+    if algorithm.upper() == 'MD5':
         hashfunc = hashlib.md5
-    elif algorithm == 'SHA':
+    elif algorithm.upper() == 'SHA':
         hashfunc = hashlib.sha1
-    elif algorithm == 'SHA-256':
+    elif algorithm.upper() == 'SHA-256':
         hashfunc = hashlib.sha256
-    elif algorithm == 'SHA-512':
+    elif algorithm.upper() == 'SHA-512':
         hashfunc = hashlib.sha512
 
     return hashfunc(string.encode()).hexdigest()
