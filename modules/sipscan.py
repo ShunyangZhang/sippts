@@ -59,7 +59,7 @@ class SipScan:
 
     def start(self):
         supported_protos = ['UDP', 'TCP', 'TLS']
-        supported_methods = ['OPTIONS', 'REGISTER', 'INVITE']
+        supported_methods = ['OPTIONS', 'REGISTER', 'INVITE', 'NOTIFY']
 
         if self.nocolor == 1:
             self.c.ansy()
