@@ -318,8 +318,8 @@ def create_message(method, contactdomain, fromuser, fromname, fromdomain, touser
         if method != 'CANCEL':
             headers['Allow'] = 'INVITE,REGISTER,ACK,CANCEL,BYE,NOTIFY,REFER,OPTIONS,INFO,SUBSCRIBE,UPDATE,PRACK,MESSAGE'
 
-    if method == 'REGISTER':
-        headers['Expires'] = '10'
+    # if method == 'REGISTER':
+    #     headers['Expires'] = '10'
 
     if withsdp == 1:
         headers['Content-Type'] = 'application/sdp'
